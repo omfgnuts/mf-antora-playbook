@@ -1,0 +1,34 @@
+antora:
+  extensions:
+    - require: antora-navigator-extension
+      config_file: ./antora-navigator.yml
+site:
+  title: Module Federation Documentation
+  start_page: component-b::index.adoc
+  robots: allow
+urls:
+  html_extension_style: indexify
+content:
+  sources:
+    - url: https://github.com/omfgnuts/test-component-a.git
+      branches: HEAD
+    - url: https://github.com/omfgnuts/test-component-b.git
+      branches: [main, v2.0, v1.0]
+      start_path: docs
+ui:
+  bundle:
+    url: /Users/ohmynuts/Documents/Work/MF/mf-docs-site-ui/build/ui-bundle.zip
+    snapshot: false
+  supplemental_files: ./node_modules/antora-navigator-extension/data/
+output:
+  dir: ./public
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+runtime:
+  fetch: true
