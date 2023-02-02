@@ -1,0 +1,33 @@
+antora:
+  extensions:
+    - require: antora-navigator-extension
+      config_file: ./mf-antora-navigator.yml
+site:
+  title: 模块联合文档
+  url: /manual/zh
+  start_page: ipt::index.adoc
+content:
+  sources:
+    - url: https://github.com/omfgnuts/mf-translations.git
+      branches: [translated-main]
+      start_path: docs/zh
+ui:
+  bundle:
+    url: https://github.com/omfgnuts/mf-docs-site-ui/releases/download/release-7/ui-bundle.zip
+    snapshot: false
+  supplemental_files: ./node_modules/antora-navigator-extension/data/
+output:
+  clean: true
+  dir: ./output/zh
+runtime:
+  fetch: true
+  cache_dir: ./cache
+urls:
+  html_extension_style: drop
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+  attributes:
+    page-pagination: yes
+    language: zh
+
