@@ -1,0 +1,1 @@
+siteNavigationData=[{name:"ipt",title:"Integrated Publishing Toolkit",versions:[{version:"2.5",displayVersion:2.5,sets:[{items:[{content:"How to Use this Manual",url:"/ipt/2.5/introduction"},{content:"Getting Started – Installation and Initial Setup",url:"/ipt/2.5/getting-started"},{content:"Glossary",url:"/ipt/2.5/glossary"}]}]}]}];siteNavigationData.homeUrl="/ipt/2.5/";

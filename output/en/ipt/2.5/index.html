@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GBIF Integrated Publishing Toolkit (IPT) User Manual :: Documentación de federación de módulos</title>
+    <link rel="next" href="introduction">
+    <meta name="generator" content="Antora 3.1.2">
+<link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/vendor/tabs.css"><link rel="stylesheet" href="../../_/css/nav.css">
+    <meta name="page-component" content="ipt">
+    <meta name="page-version" content="2.5">
+    <meta name="page-url" content="/ipt/2.5/">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/manual/en">Documentación de federación de módulos</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<aside class="nav-container nav-sidebar">
+    <nav class="nav" aria-label="Docs">
+        <div class="context">
+            <span class="version">
+                
+            </span>
+        </div>
+    </nav>
+</aside>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="./" class="home-link is-current"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ul>
+            <li>2.5</li>
+                    <li><a href="./">Integrated Publishing Toolkit</a></li>
+                <li><a href="./">GBIF Integrated Publishing Toolkit (IPT) User Manual</a></li>
+        </ul>
+</nav>
+<div class="page-languages">
+    <button class="language-menu-toggle" title="Show other languages of the site">&#127760; </button>
+    <div class="language-menu"><a class="language" href="../../../en/ipt/2.5/">English</a><a class="language" href="../../../es/ipt/2.5/">Español</a><a class="language" href="../../../zh/ipt/2.5/">繁體中文</a></div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/omfgnuts/mf-translations-test/edit/main/docs/en/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">GBIF Integrated Publishing Toolkit (IPT) User Manual</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>For information on the latest release, including downloads, see the <a href="#releases.adoc" class="xref unresolved">Releases</a> page.</em></p>
+</div>
+<div class="paragraph">
+<p>The GBIF Integrated Publishing Toolkit (IPT) is a freely available open source web application that makes it easy to share four types of biodiversity-related information:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>primary taxon occurrence data</p>
+</li>
+<li>
+<p>taxon checklists</p>
+</li>
+<li>
+<p>sampling event data</p>
+</li>
+<li>
+<p>general metadata about data sources.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>An IPT instance as well as the data and metadata registered through the IPT are connected to the GBIF Registry, are indexed for consultation via the GBIF network and portal, and are made accessible for public use.  The IPT can also be configured with a DataCite account in order to assign DOIs to datasets transforming it into a data repository.</p>
+</div>
+<div class="paragraph">
+<p>Founded and funded by governments in 2001, The Global Biodiversity Information Facility (GBIF) is the world&#8217;s largest multi-lateral initiative for enabling free access to biodiversity data via the
+Internet. <a href="https://www.gbif.org/participation/participant-list">GBIF&#8217;s diverse Participants</a> include primarily countries and
+international organizations. GBIF also has formal partnerships with
+relevant international treaty bodies. GBIF&#8217;s mission is to promote and enable free and open access to biodiversity data worldwide via the Internet to underpin science, conservation and sustainable development. More information about GBIF can be found at <a href="https://www.gbif.org/">GBIF.org</a>.</p>
+</div>
+<div class="paragraph">
+<p>Several factors have provided motivation for GBIF to lead the development of the IPT:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>limitations of previous publishing tools (DiGIR, TAPIR, BioCASe) to easily publish and transfer large datasets;</p>
+</li>
+<li>
+<p>the need to reduce the load on both the publisher&#8217;s server, and GBIF&#8217;s server during indexing. The reason being that indexing from DiGIR, TAPIR, or BioCASe caused heavy loads due to repeated HTTP request-response interactions.</p>
+</li>
+<li>
+<p>the need to speed up the process of indexing biodiversity occurrence datasets;</p>
+</li>
+<li>
+<p>the need to offer additional benefits and services to the data publishers to encourage data publication;</p>
+</li>
+<li>
+<p>the lack of appropriate tools to publish certain types of biodiversity data, such as names checklists and data set metadata.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To understand how the IPT works, try watching this concise 25 minute live demo showing how a dataset gets properly published and registered through GBIF.org.</p>
+</div>
+<div class="videoblock responsive-video">
+<div class="title">How to publish biodiversity data through GBIF.org using the IPT</div>
+<div class="content">
+<iframe width="100%" src="https://www.youtube.com/embed/eDH9IoTrMVE?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="users"><a class="anchor" href="#users"></a>Users</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you&#8217;re only interested in trying out the IPT please request an account on the <a href="https://ipt.gbif.org/">Demo IPT</a> by sending an email to <a href="mailto:helpdesk@gbif.org">helpdesk@gbif.org</a>.</p>
+</div>
+<div class="paragraph">
+<p>The simplest way to begin using the IPT is to request a free account on a <a href="#data-hosting-centres.adoc" class="xref unresolved">trusted data hosting centre</a> allowing you to manage your own datasets and publish them through GBIF.org without the hassle of setting up and maintaining the IPT on your own server.</p>
+</div>
+<div class="paragraph">
+<p>Otherwise if want to setup your own instance of the IPT the <a href="getting-started" class="xref page">Getting Started Guide</a> is your entry point.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Be sure to sign up to the <a href="https://lists.gbif.org/mailman/listinfo/ipt/">IPT Mailing List</a>, which serves as a support group for IPT users. It is essential that the IPT is kept up to date to be as secure and robust as possible, so if you are responsible for administering an IPT, then you should be signed up to be notified of new releases so that you can update immediately.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="developers"><a class="anchor" href="#developers"></a>Developers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The core development of the IPT is directed by GBIF, but the coding is a community effort and everyone is welcome to join. Start by browsing the <a href="https://github.com/gbif/ipt/issues">Open Issues</a> to find something that you&#8217;d like to start working on. Kindly note that contributions are welcome in the form of a <a href="https://help.github.com/articles/creating-a-pull-request/">pull request</a> using a branch or fork of the repository. Full instructions aimed at developers can be found <a href="#developer-guide.adoc" class="xref unresolved">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="translators"><a class="anchor" href="#translators"></a>Translators</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The IPT user interface and manual both need internationalization, but it&#8217;s a community effort and everyone is welcome to join. Full instructions aimed at translators can be found <a href="#translations.adoc" class="xref unresolved">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>Thanks to an enormous community effort, and by leveraging the power of the <a href="https://crowdin.com/project/gbif-ipt">Crowdin</a> localization tool, the user interface has already been translated into seven different languages: English, French, Spanish, Traditional Chinese, Brazilian Portuguese, Japanese, and Russian.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="acknowledgements"><a class="anchor" href="#acknowledgements"></a>Acknowledgements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A large number of dedicated volunteers contribute to the success of this software. With your help, the IPT has become a successful tool in use all around the world.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://crowdin.com/">Crowdin</a> is kindly supporting this open source project by giving GBIF a free access to its localization management platform. Crowdin makes it possible to manage a large number of concurrent translations.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="next"><a href="introduction">How to Use this Manual</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<div id="icondefs" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <desc>Octicons v17.0.0 by GitHub - https://primer.style/octicons/ - License: MIT</desc>
+        <symbol id="icon-nav-group" viewBox="0 0 16 16">
+            <path d="m12.78 5.345a0.75 0.75 0 0 1 0 1.06l-4.25 4.25a0.75 0.75 0 0 1-1.06 0l-4.25-4.25a0.75 0.75 0 0 1 1.06-1.06l3.72 3.72 3.72-3.72a0.75 0.75 0 0 1 1.06 0z"/>
+        </symbol>
+        <symbol id="icon-nav-component" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.543 7.25h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.506 6.506 0 00-4.666 5.5zm2.733 1.5H1.543a6.506 6.506 0 004.666 5.5 11.13 11.13 0 01-.352-.552c-.715-1.192-1.437-2.874-1.581-4.948zm1.504 0h4.44a9.637 9.637 0 01-1.363 4.177c-.306.51-.612.919-.857 1.215a9.978 9.978 0 01-.857-1.215A9.637 9.637 0 015.78 8.75zm4.44-1.5H5.78a9.637 9.637 0 011.363-4.177c.306-.51.612-.919.857-1.215.245.296.55.705.857 1.215A9.638 9.638 0 0110.22 7.25zm1.504 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.506 6.506 0 004.666-5.5h-2.733zm2.733-1.5h-2.733c-.144-2.074-.866-3.756-1.58-4.948a11.738 11.738 0 00-.353-.552 6.506 6.506 0 014.666 5.5zM8 0a8 8 0 100 16A8 8 0 008 0z"/>
+        </symbol>
+        <symbol id="icon-nav-item-toggle" viewBox="0 0 16 16">
+            <path d="m5.345 3.22a0.75 0.75 0 0 1 1.06 0l4.25 4.25a0.75 0.75 0 0 1 0 1.06l-4.25 4.25a0.75 0.75 0 0 1-1.06-1.06l3.72-3.72-3.72-3.72a0.75 0.75 0 0 1 0-1.06z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="icon-nav-version" viewBox="0 0 16 16">
+            <path d="m12.78 5.345a0.75 0.75 0 0 1 0 1.06l-4.25 4.25a0.75 0.75 0 0 1-1.06 0l-4.25-4.25a0.75 0.75 0 0 1 1.06-1.06l3.72 3.72 3.72-3.72a0.75 0.75 0 0 1 1.06 0z"/>
+        </symbol>
+    </svg>
+</div>
+<script src="../../site-navigation-data.js"></script>
+<script src="../../_/js/nav.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/tabs.js"></script>
+  </body>
+</html>
