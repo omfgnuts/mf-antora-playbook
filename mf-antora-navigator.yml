@@ -1,5 +1,8 @@
-nav:
-  subcomponents:
-    - parent: component-xyx
-      components: [component-a, component-b]
+groups:
+- root: true
+  components: ipt
+- title: Demo
+  components: 'component-*'
+- title: TESSST
+  components: ['*']
 output_file: site-navigation-data.js

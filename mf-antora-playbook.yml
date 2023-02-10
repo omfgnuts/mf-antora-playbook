@@ -15,6 +15,7 @@ content:
     - url: https://github.com/omfgnuts/test-component-b.git
       branches: [main, v2.0, v1.0]
       start_path: docs
+
 ui:
   bundle:
     url: https://github.com/omfgnuts/mf-docs-site-ui/releases/download/release-7/ui-bundle.zip

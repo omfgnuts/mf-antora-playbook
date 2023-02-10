@@ -6,9 +6,12 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@antora/cli": "^3.1.0",
+    "@antora/lunr-extension": "^1.0.0-alpha.8",
     "@antora/site-generator": "^3.1.0",
     "@asciidoctor/tabs": "^1.0.0-alpha.12",
+    "@node-rs/jieba": "^1.6.2",
     "antora-navigator-extension": "git+https://gitlab.com/opendevise/oss/antora-navigator-extension",
-    "asciidoctor-kroki": "^0.14.0"
+    "asciidoctor-kroki": "^0.14.0",
+    "nodejieba": "^2.6.0"
   }
 }
